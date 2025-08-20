@@ -5,6 +5,12 @@ return {
     "wfxr/minimap.vim",
     build = "cargo install --locked code-minimap",
     cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+    keys = {
+      { "<leader>mm", "<cmd>MinimapToggle<CR>", desc = "Toggle Minimap" },
+      { "<leader>mr", "<cmd>MinimapRefresh<CR>", desc = "Refresh Minimap" },
+      { "<leader>mc", "<cmd>MinimapClose<CR>", desc = "Close Minimap" },
+      { "<leader>mo", "<cmd>Minimap<CR>", desc = "Open Minimap" },
+    },
     config = function()
       -- Configuration de la minimap
       vim.g.minimap_width = 10
