@@ -11,7 +11,7 @@ return {
       local lualine = require('lualine')
       -- Fonction pour afficher le LSP actif
       local function lsp_client()
-        local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+        local clients = vim.lsp.get_clients({ bufnr = 0 })
         if #clients == 0 then
           return "No LSP"
         end

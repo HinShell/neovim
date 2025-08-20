@@ -11,7 +11,7 @@ utils.augroup("format_on_save", function(augroup)
     pattern = "*",
     callback = function()
       -- Seulement si LSP est attaché au buffer
-      if #vim.lsp.get_active_clients({ bufnr = 0 }) > 0 then
+      if #vim.lsp.get_clients({ bufnr = 0 }) > 0 then
         vim.lsp.buf.format({ async = false })
       end
     end,
