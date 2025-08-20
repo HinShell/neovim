@@ -3,7 +3,12 @@ return {
     -- Nom : nvim-tree.lua
     -- Adresse : https://github.com/nvim-tree/nvim-tree.lua
     "nvim-tree/nvim-tree.lua",
-    lazy = false,
+    cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFocus", "NvimTreeFindFile", "NvimTreeCollapse" },
+    keys = {
+      { "<C-n>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer" },
+      { "<leader>e", "<cmd>NvimTreeFocus<CR>", desc = "Focus file explorer" },
+      { "<leader>fe", "<cmd>NvimTreeFindFile<CR>", desc = "Find file in explorer" },
+    },
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },

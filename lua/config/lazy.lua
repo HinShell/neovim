@@ -32,9 +32,6 @@ require("lazy").setup({
     { import = "plugins.git" },       -- Intégration Git
     { import = "plugins.ai" },        -- Intelligence artificielle
     { import = "plugins.tools" },     -- Outils divers
-    
-    -- Import du fichier plugins.lua s'il contient encore des plugins
-    { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

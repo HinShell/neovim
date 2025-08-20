@@ -3,8 +3,14 @@ return {
     -- Nom : bufferline.nvim
     -- Adresse : https://github.com/akinsho/bufferline.nvim
     'akinsho/bufferline.nvim',
-    lazy = false,
+    event = "VeryLazy", -- Charger après l'interface de base
     dependencies = 'nvim-tree/nvim-web-devicons',
+    keys = {
+      { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Next Buffer" },
+      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Previous Buffer" },
+      { "<leader>bd", "<cmd>bd<CR>", desc = "Delete buffer" },
+      { "<leader>bD", "<cmd>bd!<CR>", desc = "Delete buffer force" },
+    },
     opts = {
       options = {
         always_show_bufferline = false,
