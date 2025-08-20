@@ -44,6 +44,11 @@ nvim
 1. **Installation des plugins** : Au premier lancement, Lazy.nvim installera automatiquement tous les plugins
 2. **Installation des serveurs LSP** : Utilisez `:Mason` pour installer des serveurs LSP supplémentaires
 3. **Mise à jour Treesitter** : `:TSUpdate` pour mettre à jour les parsers
+4. **Installation Markdown Preview** : Si le plugin markdown-preview ne fonctionne pas :
+   ```bash
+   cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app
+   npm install
+   ```
 
 ## 🔧 Plugins Inclus
 
@@ -59,6 +64,9 @@ nvim
 ### Navigation et Fichiers
 - **[Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)** - Explorateur de fichiers
 - **[Telescope](https://github.com/nvim-telescope/telescope.nvim)** - Fuzzy finder
+
+### Documentation et Markdown
+- **[Markdown-preview](https://github.com/iamcco/markdown-preview.nvim)** - Prévisualisation Markdown en temps réel
 
 ### Git Integration
 - **[Gitsigns](https://github.com/lewis6991/gitsigns.nvim)** - Indicateurs Git et navigation dans les hunks
@@ -147,6 +155,13 @@ nvim
 | `<leader>ps` | Copier nom | Nom du fichier uniquement |
 | `<leader>np` | Noice pick | Sélecteur Noice |
 
+### Markdown
+| Raccourci | Action | Description |
+|-----------|--------|-------------|
+| `<leader>mp` | Toggle Preview | Basculer prévisualisation Markdown |
+| `<leader>ms` | Start Preview | Démarrer prévisualisation |
+| `<leader>me` | Stop Preview | Arrêter prévisualisation |
+
 ## 🛠️ Configuration
 
 ### Langages Supportés (Treesitter)
@@ -184,6 +199,7 @@ nvim
 │       ├── gitsigns.lua
 │       ├── indent-blankline.lua
 │       ├── lsp-zero.lua
+│       ├── markdown-preview.lua
 │       ├── minimap.lua
 │       ├── nvim-tree.lua
 │       ├── nvim-treesitter.lua
@@ -244,6 +260,18 @@ vim.opt.nouvelle_option = true
 ### Installation de code-minimap (si nécessaire)
 ```bash
 cargo install --locked code-minimap
+```
+
+### Problèmes avec Markdown Preview
+Si la prévisualisation Markdown ne fonctionne pas :
+```bash
+# Installation manuelle des dépendances Node.js
+cd ~/.local/share/nvim/lazy/markdown-preview.nvim/app
+npm install
+
+# Test de fonctionnement
+nvim test.md
+:MarkdownPreview
 ```
 
 ### Redémarrer LSP Lua (si warnings)
