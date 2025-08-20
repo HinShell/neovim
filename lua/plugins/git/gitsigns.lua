@@ -89,7 +89,7 @@ return {
         col = 1
       },
       on_attach = function(bufnr)
-        -- Les mappings sont définis dans lua/custom/mappings.lua
+        -- Configuration par défaut pour gitsigns
       end
     },
   },
