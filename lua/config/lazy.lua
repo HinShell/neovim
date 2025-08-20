@@ -24,7 +24,16 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
+    -- Import des plugins par catégorie
+    { import = "plugins.ui" },        -- Interface utilisateur
+    { import = "plugins.editor" },    -- Édition de code
+    { import = "plugins.navigation" }, -- Navigation
+    { import = "plugins.lsp" },       -- LSP et complétion
+    { import = "plugins.git" },       -- Intégration Git
+    { import = "plugins.ai" },        -- Intelligence artificielle
+    { import = "plugins.tools" },     -- Outils divers
+    
+    -- Import du fichier plugins.lua s'il contient encore des plugins
     { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.

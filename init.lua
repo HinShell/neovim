@@ -1,15 +1,20 @@
 ---@diagnostic disable: undefined-global
 
-function Map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
-end
+-- =============================================
+-- NEOVIM CONFIGURATION MODERNE
+-- =============================================
 
-require("custom.mappings")
-require("custom.options")
-require("config.lazy")
+-- Charger les utilitaires en premier
+require("utils")
 
+-- Configuration de base
+require("config.options")    -- Options Neovim
+require("config.keymaps")    -- Mappings génériques  
+require("config.autocmds")   -- Autocommandes
+require("config.lazy")       -- Gestionnaire de plugins
+
+-- TODO: Temporaire - Sera supprimé quand les mappings seront dans les plugins
+require("config.plugin-keymaps") -- Mappings spécifiques aux plugins
+
+-- Appliquer le thème
 vim.cmd('colorscheme catppuccin')
