@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 -- =============================================
 -- NEOVIM CONFIGURATION MODERNE
 -- =============================================

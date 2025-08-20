@@ -51,15 +51,7 @@ return {
 
           -- Custom handler for Lua language server
           lua_ls = function()
-            lsp_zero.configure("lua_ls", {
-              settings = {
-                Lua = {
-                  diagnostics = {
-                    globals = { "vim" }
-                  }
-                }
-              }
-            })
+            lsp_zero.configure("lua_ls", {})
           end,
         }
       })

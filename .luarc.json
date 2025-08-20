@@ -1,0 +1,21 @@
+{
+  "diagnostics": {
+    "globals": ["vim"],
+    "disable": ["missing-fields"]
+  },
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "checkThirdParty": false,
+    "library": [
+      "${3rd}/luv/library"
+    ]
+  },
+  "telemetry": {
+    "enable": false
+  },
+  "completion": {
+    "callSnippet": "Replace"
+  }
+}
