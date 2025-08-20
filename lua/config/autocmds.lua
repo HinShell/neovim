@@ -38,7 +38,7 @@ utils.augroup("highlight_yank", function(augroup)
     group = augroup,
     pattern = "*",
     callback = function()
-      vim.highlight.on_yank({ timeout = 200 })
+      vim.highlight.on_yank({ timeout = 400 })
     end,
   })
 end)
