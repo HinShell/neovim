@@ -9,6 +9,12 @@ return {
       options = {
         always_show_bufferline = false,
         numbers = "buffer_id",
+        separator_style = "slant",
+        hover = {
+          enabled = true,
+          delay = 200,
+          reveal = {'close'}
+        },
         close_command = function(bufnum)
             -- Aller au buffer suivant avant de fermer
             vim.cmd("BufferLineCycleNext")
