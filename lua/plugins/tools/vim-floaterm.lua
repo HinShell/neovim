@@ -20,6 +20,14 @@ return {
       { "<C-é>", "<cmd>FloatermNext<CR>", mode = "t", desc = "Next terminal" },
       { "<C-&>", "<cmd>FloatermPrev<CR>", mode = "t", desc = "Previous terminal" },
       
+      -- Fix pour PageUp/PageDown dans le terminal
+      { "<PageUp>", "<C-\\><C-n><PageUp>i", mode = "t", desc = "Page Up in terminal" },
+      { "<PageDown>", "<C-\\><C-n><PageDown>i", mode = "t", desc = "Page Down in terminal" },
+      
+      -- Alternatives avec Shift+Arrow pour scroll
+      { "<S-Up>", "<C-\\><C-n><C-u>i", mode = "t", desc = "Scroll up in terminal" },
+      { "<S-Down>", "<C-\\><C-n><C-d>i", mode = "t", desc = "Scroll down in terminal" },
+      
       -- Terminaux spécialisés
       { "<leader>tg", "<cmd>FloatermNew --title=Lazygit --width=0.9 --height=0.9 lazygit<cr>", desc = "Launch Lazygit" },
       { "<leader>td", "<cmd>FloatermNew --title=Lazydocker --width=0.9 --height=0.9 lazydocker<cr>", desc = "Launch Lazydocker" },
@@ -34,6 +42,33 @@ return {
       vim.g.floaterm_position = "bottom"
       vim.g.floaterm_width = 0.9
       vim.g.floaterm_autoclose = 1
+      
+      -- Améliorer le comportement du terminal
+      vim.g.floaterm_shell = vim.o.shell
+      vim.g.floaterm_borderchars = "─│─│╭╮╯╰"
+      vim.g.floaterm_opener = 'edit'
+      
+      -- Configuration pour capturer les touches spéciales
+      vim.g.floaterm_keymap_toggle = '<C-@>'
+      vim.g.floaterm_keymap_new = '<leader>tn'
+      vim.g.floaterm_keymap_kill = '<leader>tk'
+    end,
+    config = function()
+      -- Autocommande pour configurer le terminal mode
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "floaterm",
+        callback = function()
+          -- Permettre le scroll avec la molette
+          vim.keymap.set('t', '<ScrollWheelUp>', '<C-\\><C-n><ScrollWheelUp>', { buffer = true, silent = true })
+          vim.keymap.set('t', '<ScrollWheelDown>', '<C-\\><C-n><ScrollWheelDown>', { buffer = true, silent = true })
+          
+          -- Permettre Ctrl+C pour interrompre
+          vim.keymap.set('t', '<C-c>', '<C-c>', { buffer = true, silent = true })
+          
+          -- Escape pour sortir du terminal mode
+          vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { buffer = true, silent = true })
+        end,
+      })
     end,
   },
 }
