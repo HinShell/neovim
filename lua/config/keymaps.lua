@@ -110,10 +110,16 @@ map("i", "kj", "<ESC>", { desc = "Exit insert mode" })
 
 -- Sortie du mode terminal
 map("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+-- Navigation entre fenêtres depuis le terminal
 map("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
 map("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
 map("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
 map("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
+
+-- Raccourcis rapides pour floaterm depuis le terminal
+map("t", "<C-@>", "<cmd>FloatermToggle<cr>", { desc = "Toggle floaterm" })
+map("t", "<C-n>", "<cmd>FloatermNew<cr>", { desc = "New floaterm" })
 
 -- =============================================
 -- DIAGNOSTICS

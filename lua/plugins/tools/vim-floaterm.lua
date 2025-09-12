@@ -48,10 +48,10 @@ return {
       vim.g.floaterm_borderchars = "─│─│╭╮╯╰"
       vim.g.floaterm_opener = 'edit'
       
-      -- Configuration pour capturer les touches spéciales
-      vim.g.floaterm_keymap_toggle = '<C-@>'
-      vim.g.floaterm_keymap_new = '<leader>tn'
-      vim.g.floaterm_keymap_kill = '<leader>tk'
+      -- DÉSACTIVER les keymaps globaux de floaterm pour éviter la capture de leader
+      vim.g.floaterm_keymap_toggle = '<F1>'     -- Utiliser une touche inutilisée
+      vim.g.floaterm_keymap_new = '<F2>'        -- Utiliser une touche inutilisée  
+      vim.g.floaterm_keymap_kill = '<F3>'       -- Utiliser une touche inutilisée
     end,
     config = function()
       -- Autocommande pour configurer le terminal mode
@@ -67,6 +67,10 @@ return {
           
           -- Escape pour sortir du terminal mode
           vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { buffer = true, silent = true })
+          
+          -- Navigation et commandes utiles en mode terminal
+          vim.keymap.set('t', '<C-w>', '<C-\\><C-n><C-w>', { buffer = true, silent = true, desc = "Window commands in terminal" })
+          vim.keymap.set('t', '<C-o>', '<C-\\><C-n><C-o>', { buffer = true, silent = true, desc = "One command in terminal" })
         end,
       })
     end,
