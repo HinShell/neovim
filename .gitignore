@@ -1,1 +1,96 @@
-env/
+# =============================================
+# NEOVIM CONFIGURATION .GITIGNORE
+# =============================================
+
+# ===== ENVIRONNEMENT NODE.JS =====
+env/                    # Environnement Node.js auto-géré
+node_modules/           # Dependencies Node.js
+package-lock.json       # Lock file npm (si présent)
+yarn.lock              # Lock file yarn (si présent)
+
+# ===== LAZY.NVIM TEMPORAIRES =====
+.lazy/                  # Cache Lazy.nvim
+.repro/                 # Environnement de reproduction minimal
+
+# ===== LOGS ET DEBUGGING =====
+*.log                   # Logs généraux
+startup.log            # Log de démarrage Neovim
+lsp.log                # Logs LSP
+debug.log              # Logs de debug
+nvim.log               # Logs Neovim
+
+# ===== FICHIERS TEMPORAIRES =====
+*.tmp                   # Fichiers temporaires
+*.swp                   # Swap files Vim/Neovim
+*.swo                   # Swap files Vim/Neovim
+*~                      # Backup files
+.*.swp                  # Hidden swap files
+.*.swo                  # Hidden swap files
+
+# ===== COMPILATION ET BUILD =====
+*.o                     # Object files
+*.so                    # Shared objects
+*.dylib                 # Dynamic libraries (macOS)
+*.dll                   # Dynamic libraries (Windows)
+*.exe                   # Executables
+compile_commands.json   # LSP compile commands
+
+# ===== LAZY.NVIM SPÉCIFIQUES =====
+lua-language-server/    # Serveur Lua LSP téléchargé
+mason/                  # Installation Mason (si local)
+
+# ===== SYSTÈMES D'EXPLOITATION =====
+# macOS
+.DS_Store              # Métadonnées macOS
+.AppleDouble           # Apple Double files
+.LSOverride            # Launch Services Override
+._*                    # Resource forks
+
+# Windows
+Thumbs.db              # Thumbnails cache
+Desktop.ini            # Folder customization
+$RECYCLE.BIN/          # Recycle bin
+
+# Linux
+.directory             # KDE directory settings
+
+# ===== ÉDITEURS ET IDES =====
+.vscode/               # VS Code settings (si utilisé en parallèle)
+.idea/                 # IntelliJ IDEA
+*.sublime-*            # Sublime Text
+
+# ===== SAUVEGARDES ET ARCHIVES =====
+*.backup               # Fichiers de sauvegarde
+*.bak                  # Fichiers de sauvegarde
+*.tar.gz               # Archives
+*.zip                  # Archives
+
+# ===== CONFIGURATION PERSONNELLE =====
+# Fichiers de configuration locale (optionnel)
+lua/config/local.lua   # Configuration spécifique machine
+.local/                # Dossier configuration locale
+
+# ===== TESTING ET DÉVELOPPEMENT =====
+test_*.lua             # Fichiers de test temporaires
+scratch.lua            # Fichier scratch pour tests
+playground.lua         # Fichier playground
+
+# ===== PERFORMANCE ET PROFILING =====
+profile.log            # Logs de profiling
+memory.log             # Logs mémoire
+benchmark.txt          # Résultats benchmarks
+
+# ===== SECRETS ET TOKENS =====
+.env                   # Variables d'environnement
+.env.local             # Variables d'environnement locales
+secrets.lua            # Fichier secrets (si présent)
+tokens.lua             # Fichiers tokens (si présent)
+
+# ===== DOCUMENTATION GÉNÉRÉE =====
+docs/generated/        # Documentation auto-générée
+*.html                 # Documentation HTML générée
+
+# ===== CACHE DIVERS =====
+.cache/                # Cache général
+cache/                 # Cache local
+*.cache                # Fichiers cache
