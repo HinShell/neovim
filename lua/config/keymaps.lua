@@ -2,7 +2,7 @@
 -- Mappings génériques de base (pas spécifiques aux plugins)
 
 local utils = require("utils")
-local map = utils.map
+local map = utils.functions.map
 
 -- Configuration de la touche leader
 vim.g.mapleader = " "

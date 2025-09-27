@@ -5,7 +5,7 @@ local utils = require("utils")
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Formatage automatique à la sauvegarde (si LSP disponible)
-utils.augroup("format_on_save", function(augroup)
+utils.functions.augroup("format_on_save", function(augroup)
   autocmd("BufWritePre", {
     group = augroup,
     pattern = "*",
@@ -19,7 +19,7 @@ utils.augroup("format_on_save", function(augroup)
 end)
 
 -- Retour à la dernière position dans le fichier
-utils.augroup("restore_cursor", function(augroup)
+utils.functions.augroup("restore_cursor", function(augroup)
   autocmd("BufReadPost", {
     group = augroup,
     pattern = "*",
@@ -33,7 +33,7 @@ utils.augroup("restore_cursor", function(augroup)
 end)
 
 -- Mise en évidence temporaire des yanks
-utils.augroup("highlight_yank", function(augroup)
+utils.functions.augroup("highlight_yank", function(augroup)
   autocmd("TextYankPost", {
     group = augroup,
     pattern = "*",
@@ -44,7 +44,7 @@ utils.augroup("highlight_yank", function(augroup)
 end)
 
 -- Auto-création des répertoires manquants
-utils.augroup("auto_create_dir", function(augroup)
+utils.functions.augroup("auto_create_dir", function(augroup)
   autocmd("BufWritePre", {
     group = augroup,
     pattern = "*",
@@ -58,7 +58,7 @@ utils.augroup("auto_create_dir", function(augroup)
 end)
 
 -- Désactiver les numéros de ligne en mode terminal
-utils.augroup("terminal_settings", function(augroup)
+utils.functions.augroup("terminal_settings", function(augroup)
   autocmd("TermOpen", {
     group = augroup,
     pattern = "*",
@@ -70,7 +70,7 @@ utils.augroup("terminal_settings", function(augroup)
 end)
 
 -- Fermer automatiquement certains types de buffers avec 'q'
-utils.augroup("close_with_q", function(augroup)
+utils.functions.augroup("close_with_q", function(augroup)
   autocmd("FileType", {
     group = augroup,
     pattern = {
@@ -90,7 +90,7 @@ utils.augroup("close_with_q", function(augroup)
 end)
 
 -- Redimensionner les fenêtres en cas de redimensionnement du terminal
-utils.augroup("resize_splits", function(augroup)
+utils.functions.augroup("resize_splits", function(augroup)
   autocmd("VimResized", {
     group = augroup,
     callback = function()
