@@ -28,6 +28,35 @@ return {
                 get = function() return vim.wo.relativenumber end,
                 on_toggle = function(on) vim.wo.relativenumber = on end,
               },
+              -- Add format_on_save toggle
+              {
+                id = "Format on Save",
+                get = function()
+                  -- Check if the autocmd exists using the augroup name
+                  return vim.fn.exists("#nvim_config_format_on_save#BufWritePre") == 1
+                end,
+                on_toggle = function(on)
+                  if on then
+                    -- Recreate the augroup and autocmd
+                    local utils = require("utils") -- Assuming utils is correctly required
+                    utils.functions.augroup("format_on_save", function(augroup)
+                      vim.api.nvim_create_autocmd("BufWritePre", {
+                        group = augroup,
+                        pattern = "*",
+                        callback = function()
+                          -- Only run if LSP client is attached
+                          if #vim.lsp.get_clients({ bufnr = 0 }) > 0 then
+                            vim.lsp.buf.format({ async = false })
+                          end
+                        end,
+                      })
+                    end)
+                  else
+                    -- Delete the augroup to disable the functionality
+                    vim.api.nvim_del_augroup_by_name("nvim_config_format_on_save")
+                  end
+                end,
+              },
               {
                 id = "Tabstop",
                 label = "Tab Stop", -- optional label
