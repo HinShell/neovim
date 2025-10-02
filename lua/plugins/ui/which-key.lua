@@ -115,11 +115,6 @@ return {
         { "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Renommer" },
         { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Aide signature" },
 
-        { "<leader>e", group = "🗂️  Explorateur" },
-        { "<leader>ee", "<cmd>Neotree toggle<cr>", desc = "Toggle explorateur" },
-        { "<leader>ef", "<cmd>Neotree focus<cr>", desc = "Focus explorateur" },
-        { "<leader>er", "<cmd>NvimTreeRefresh<cr>", desc = "Rafraîchir explorateur" },
-
         { "<leader>f", group = "🔍 Rechercher" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Rechercher buffers" },
         { "<leader>fc", "<cmd>Telescope commands<cr>", desc = "Rechercher commandes" },
