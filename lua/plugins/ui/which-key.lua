@@ -3,7 +3,7 @@ return {
     -- Nom : which-key.nvim
     -- Adresse : https://github.com/folke/which-key.nvim
     "folke/which-key.nvim",
-    dependencies = { 
+    dependencies = {
       "nvim-tree/nvim-web-devicons",
       "echasnovski/mini.icons"
     },
@@ -14,20 +14,20 @@ return {
     end,
     config = function()
       local wk = require("which-key")
-      
+
       wk.setup({
         -- Configuration générale
         preset = "modern",
         delay = 200,
         expand = 1,
         notify = true,
-        
+
         -- Triggers
         triggers = {
           { "<auto>", mode = "nixsotc" },
-          { "a", mode = { "n", "v" } },
+          { "a",      mode = { "n", "v" } },
         },
-        
+
         -- Configuration de l'interface
         win = {
           no_overlap = true,
@@ -40,13 +40,13 @@ return {
             winblend = 10,
           },
         },
-        
+
         -- Configuration de la disposition
         layout = {
           width = { min = 20 },
           spacing = 3,
         },
-        
+
         -- Icônes
         icons = {
           breadcrumb = "»",
@@ -87,7 +87,7 @@ return {
             F12 = "󱊶",
           },
         },
-        
+
         -- Désactiver pour certains types de fichiers
         disable = {
           buftypes = {},
@@ -114,11 +114,6 @@ return {
         { "<leader>ch", "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Afficher info" },
         { "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Renommer" },
         { "<leader>cs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Aide signature" },
-
-        { "<leader>e", group = "🗂️  Explorateur" },
-        { "<leader>ee", "<cmd>NvimTreeToggle<cr>", desc = "Toggle explorateur" },
-        { "<leader>ef", "<cmd>NvimTreeFocus<cr>", desc = "Focus explorateur" },
-        { "<leader>er", "<cmd>NvimTreeRefresh<cr>", desc = "Rafraîchir explorateur" },
 
         { "<leader>f", group = "🔍 Rechercher" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Rechercher buffers" },
