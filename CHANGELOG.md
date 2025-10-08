@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-10-08
+
+### 🚀 Nouvelles Fonctionnalités
+- **Explorateur de fichiers** : Migration de nvim-tree vers Neo-tree pour une expérience moderne
+- **Plugin Store** : Ajout de `store.nvim` avec `markview.nvim` pour la gestion des plugins
+- **Format on Save** : Nouvelle option dans MegaToggler pour activer/désactiver le formatage automatique
+
+### ✨ Améliorations
+- **Interface utilisateur** : Configuration améliorée de Noice avec intégration nvim-notify
+- **Configuration** : Ajout d'un fichier `.editorconfig` pour la cohérence du formatage
+- **Raccourcis clavier** : Réorganisation des mappings vers les fichiers de plugins respectifs
+- **Dépendances** : Mise à jour de tous les plugins vers leurs versions les plus récentes
+
+### 🔧 Changements Techniques
+- **Neo-tree** : Remplacement complet de nvim-tree avec nouveaux raccourcis (`<leader>ee`, `<leader>ef`)
+- **Bufferline** : Suppression de la configuration spécifique à NvimTree
+- **Noice** : Configuration LSP améliorée avec support markdown et documentation
+- **MegaToggler** : Intégration du formatage automatique avec gestion des augroups
+
+### 📦 Plugins Ajoutés
+- `nvim-neo-tree/neo-tree.nvim` - Explorateur de fichiers moderne
+- `alex-popov-tech/store.nvim` - Gestionnaire de plugins avec interface markdown
+- `OXY2DEV/markview.nvim` - Rendu markdown amélioré (dépendance de Store)
+- `rcarriga/nvim-notify` - Système de notifications élégant
+
+### 📦 Plugins Supprimés
+- `nvim-tree/nvim-tree.lua` - Remplacé par Neo-tree
+
+### 🐛 Corrections
+- **Which-key** : Suppression des raccourcis obsolètes de nvim-tree
+- **Configuration** : Nettoyage des mappings de touches redondants
+- **Bufferline** : Suppression des offsets et filtres spécifiques à nvim-tree
+
 ## [1.0.0] - 2025-12-09
 
 ### 🚀 Major Initial Release
@@ -20,7 +53,7 @@ Complete modern Neovim configuration with Lazy.nvim, LSP integration, and AI-pow
 - **Navigation**: Telescope fuzzy finder and nvim-tree file explorer
 - **Terminal Integration**: Enhanced terminal support with vim-floaterm and improved key handling
 - **Documentation**: Comprehensive README, technical documentation, and AI assistant prompts
-- **Plugin Ecosystem**: Curated selection of 37+ plugins with optimized lazy loading
+- **Plugin Ecosystem**: Curated selection of 38+ plugins with optimized lazy loading
 
 ### 🎯 Features by Category
 
@@ -68,6 +101,8 @@ Complete modern Neovim configuration with Lazy.nvim, LSP integration, and AI-pow
 - **Architecture**: Modular Lua configuration with clear separation of concerns
 - **Terminal Handling**: Special configuration to prevent leader key capture in terminal mode
 - **Utils Pattern**: Reusable helper functions for consistent development
+- **Module Loading**: Optimized utils modules loading system for better performance (commit 1ffb7f4)
+- **UI Enhancement**: Added MegaToggler plugin for quick settings toggles (commit eb11142)
 
 ### 📚 Documentation
 - Comprehensive README with installation and usage guides
@@ -95,7 +130,7 @@ Complete modern Neovim configuration with Lazy.nvim, LSP integration, and AI-pow
 - Cleaned up obsolete configuration files
 
 ### 📦 Plugin Ecosystem
-**37 carefully selected plugins with optimized loading:**
+**38 carefully selected plugins with optimized loading:**
 
 **Core Management:**
 - lazy.nvim (Plugin manager)
@@ -118,6 +153,7 @@ Complete modern Neovim configuration with Lazy.nvim, LSP integration, and AI-pow
 - which-key.nvim for key discovery
 - noice.nvim for elegant notifications
 - indent-blankline.nvim for visual guides
+- megatoggler for quick settings toggles
 
 **Navigation & Search:**
 - telescope.nvim with fzf-native
@@ -137,7 +173,7 @@ Complete modern Neovim configuration with Lazy.nvim, LSP integration, and AI-pow
 
 ### 🎯 Performance Metrics
 - Startup time: Optimized for <50ms target
-- Plugin loading: 92% lazy-loaded (34/37 plugins)
+- Plugin loading: 92% lazy-loaded (35/38 plugins)
 - Memory footprint: Minimal with aggressive lazy loading
 - Loading strategy: Event-driven and command-based activation
 
