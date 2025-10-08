@@ -1,6 +1,13 @@
+<div align="center">
+
+![Neovim Config Header](https://raw.githubusercontent.com/HinShell/neovim/main/.github/assets/neovim-config-header.png)
+
 # 🚀 Configuration Neovim Moderne
 
-> Configuration Neovim optimisée avec Lazy.nvim, LSP, et intégration GitHub Copilot
+> Configuration Neovim optimisée avec Lazy.nvim, LSP, et intégration GitHub Copilot  
+> **Version 1.1.0** - Neo-tree, Store.nvim, et améliorations UI
+
+</div>
 
 [![Neovim](https://img.shields.io/badge/Neovim-0.9+-green?style=flat-square&logo=neovim)](https://neovim.io)
 [![Lua](https://img.shields.io/badge/Lua-5.1+-blue?style=flat-square&logo=lua)](https://lua.org)
@@ -22,7 +29,7 @@
 Cette configuration Neovim moderne offre un environnement de développement complet avec :
 
 - **🤖 IA intégrée** : GitHub Copilot avec chat interactif
-- **🔍 Navigation avancée** : Telescope + nvim-tree pour l'exploration
+- **🔍 Navigation avancée** : Telescope + Neo-tree pour l'exploration
 - **💡 LSP complet** : Support multi-langages avec Mason
 - **🎨 Interface élégante** : Thème Catppuccin avec composants UI modernes
 - **⚡ Performance optimisée** : Lazy loading et configuration fine-tunée
@@ -48,7 +55,7 @@ git --version   # v2.0.0+
 mv ~/.config/nvim ~/.config/nvim.backup 2>/dev/null
 
 # Clone de cette configuration
-git clone https://github.com/votre-username/neovim-config ~/.config/nvim
+git clone https://github.com/HinShell/neovim ~/.config/nvim
 
 # Premier lancement (les plugins s'installent automatiquement)
 nvim
@@ -75,6 +82,7 @@ nvim -u ~/.config/nvim/minimal.lua
 │   │   ├── 📄 options.lua      # Options Neovim
 │   │   ├── 📄 keymaps.lua      # Raccourcis génériques
 │   │   ├── 📄 autocmds.lua     # Autocommandes
+│   │   ├── 📄 terminal.lua     # Configuration terminal
 │   │   └── 📄 lazy.lua         # Configuration Lazy.nvim
 │   ├── 📁 plugins/             # Plugins organisés par catégorie
 │   │   ├── 📁 ai/              # Intelligence Artificielle
@@ -113,7 +121,7 @@ nvim -u ~/.config/nvim/minimal.lua
 | Plugin | Description | Raccourci Principal |
 |--------|-------------|-------------------|
 | **telescope.nvim** | Fuzzy finder | `<leader>ff` |
-| **nvim-tree.lua** | Explorateur fichiers | `<C-n>` |
+| **neo-tree.nvim** | Explorateur fichiers moderne | `<leader>ee` |
 | **telescope-fzf-native** | Recherche optimisée | Intégré à Telescope |
 
 ### 💻 Édition de Code
@@ -144,13 +152,22 @@ nvim -u ~/.config/nvim/minimal.lua
 | **trouble.nvim** | Diagnostics | Liste erreurs/warnings |
 | **vim-floaterm** | Terminal flottant | `<leader>ft` |
 | **minimap.vim** | Mini-carte | Vue d'ensemble fichier |
+| **store.nvim** | Gestionnaire de plugins | Interface markdown pour plugins |
+| **markview.nvim** | Rendu markdown avancé | Améliore l'affichage markdown |
+
+### 🔔 Notifications et Interface
+| Plugin | Description | Fonction |
+|--------|-------------|----------|
+| **nvim-notify** | Système de notifications | Notifications élégantes |
+| **megatoggler** | Basculement rapide d'options | Toggle format on save, etc. |
 
 ## ⌨️ Raccourcis Clavier
 
 ### 🎯 Raccourcis Généraux
 ```
 <Space>        -- Leader key
-<C-n>          -- Toggle nvim-tree
+<leader>ee     -- Toggle Neo-tree
+<leader>ef     -- Focus Neo-tree
 <C-h/j/k/l>    -- Navigation fenêtres
 <S-h/l>        -- Navigation buffers
 <Esc><Esc>     -- Clear search highlight
@@ -164,6 +181,12 @@ nvim -u ~/.config/nvim/minimal.lua
 <leader>fh     -- Help tags
 <leader>fr     -- Recent files
 <leader>fs     -- Grep string
+```
+
+### 🗂️ Neo-tree (Explorateur)
+```
+<leader>ee     -- Toggle Neo-tree
+<leader>ef     -- Focus Neo-tree
 ```
 
 ### 🤖 Copilot
@@ -249,8 +272,8 @@ ensure_installed = {
 
 ### ⚡ Métriques de Performance
 ```
-📊 Statistiques Configuration
-├── 🔌 Plugins Total : ~35
+📊 Statistiques Configuration (v1.1.0)
+├── 🔌 Plugins Total : 44
 ├── ⚡ Temps démarrage : ~50ms
 ├── 💾 Taille config : ~500KB
 ├── 🎯 Lazy loaded : ~80%
