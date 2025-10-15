@@ -6,8 +6,9 @@ return {
     event = "VeryLazy", -- Charger après l'interface de base
     dependencies = 'nvim-tree/nvim-web-devicons',
     keys = {
-      { "<Tab>",   "<cmd>BufferLineCycleNext<CR>", desc = "Next Buffer" },
-      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Previous Buffer" },
+      { "<Tab>",      "<cmd>BufferLineCycleNext<CR>",   desc = "Next Buffer" },
+      { "<S-Tab>",    "<cmd>BufferLineCyclePrev<CR>",   desc = "Previous Buffer" },
+      { "<leader>bA", "<cmd>BufferLineCloseOthers<CR>", desc = "Close Other Buffers" },
       {
         "<leader>bd",
         function()
