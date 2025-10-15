@@ -6,11 +6,8 @@
 require("utils")
 
 -- Configuration de base
-require("config.options")    -- Options Neovim
-require("config.keymaps")    -- Mappings génériques  
-require("config.autocmds")   -- Autocommandes
-require("config.terminal")   -- Configuration terminal spécifique
-require("config.lazy")       -- Gestionnaire de plugins
-
--- Appliquer le thème
-vim.cmd('colorscheme catppuccin')
+require("config.options")  -- Options Neovim
+require("config.keymaps")  -- Mappings génériques
+require("config.autocmds") -- Autocommandes
+require("config.terminal") -- Configuration terminal spécifique
+require("config.lazy")     -- Gestionnaire de plugins

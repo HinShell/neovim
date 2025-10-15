@@ -100,8 +100,6 @@ return {
         -- Leader mappings
         { "<leader>b", group = "📄 Buffer" },
         { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Liste des buffers" },
-        { "<leader>bd", "<cmd>bd<cr>", desc = "Fermer buffer" },
-        { "<leader>bD", "<cmd>bd!<cr>", desc = "Forcer fermeture buffer" },
         { "<leader>bn", "<cmd>bnext<cr>", desc = "Buffer suivant" },
         { "<leader>bp", "<cmd>bprevious<cr>", desc = "Buffer précédent" },
         { "<leader>br", "<cmd>e!<cr>", desc = "Recharger buffer" },

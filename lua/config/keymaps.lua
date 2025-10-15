@@ -20,10 +20,6 @@ map("n", "<leader>Q", "<cmd>qa!<CR>", { desc = "Quit all force" })
 -- Sauvegarde rapide avec Ctrl+S
 map({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
--- Gestion des buffers (raccourcis de base)
-map("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Delete buffer" })
-map("n", "<leader>bD", "<cmd>bd!<CR>", { desc = "Delete buffer force" })
-
 -- =============================================
 -- NAVIGATION ENTRE FENÊTRES
 -- =============================================
@@ -129,3 +125,5 @@ map("t", "<C-n>", "<cmd>FloatermNew<cr>", { desc = "New floaterm" })
 map("n", "<leader>sd", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show line diagnostics" })
 map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous diagnostic" })
 map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { desc = "Next diagnostic" })
+
+map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy" })

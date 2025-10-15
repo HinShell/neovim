@@ -41,7 +41,7 @@ return {
       local function file_size()
         local size = vim.fn.getfsize(vim.fn.expand('%:p'))
         if size <= 0 then return '' end
-        local units = {'B', 'KB', 'MB', 'GB'}
+        local units = { 'B', 'KB', 'MB', 'GB' }
         local i = 1
         while size > 1024 and i < #units do
           size = size / 1024
@@ -51,7 +51,6 @@ return {
       end
       lualine.setup({
         options = {
-          theme = 'catppuccin',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           globalstatus = true,
