@@ -7,10 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 1.1.1 - 2025-11-15
+
+### 🚀 Nouvelles Fonctionnalités
+
+- **Sélecteur de fenêtres** : Ajout du plugin nvim-window-picker pour une navigation facile entre les fenêtres ouvertes
+- **Gestionnaire de thèmes** : Intégration de theme-hub.nvim pour une gestion simplifiée des thèmes
+
+### ✨ Améliorations
+
+- **Interface utilisateur** : Amélioration de l'expérience utilisateur avec des options de personnalisation supplémentaires
+- **Explorateur de fichiers** : Optimisation des performances et de la réactivité de Neo-tree
+- **Raccourcis clavier** : Ajout de nouveaux raccourcis pour une navigation plus fluide
+- **Configuration** : Nettoyage et optimisation des fichiers de configuration pour une meilleure maintenabilité
+
+### 🔧 Changements Techniques
+
+- **Neo-tree** : Ajustement des paramètres pour une meilleure intégration avec les autres plugins
+- **Bufferline** : Amélioration de la gestion des onglets et des fenêtres
+- **Noice** : Mise à jour de la configuration pour une meilleure gestion des notifications
+- **MegaToggler** : Ajout de nouvelles options de bascule pour une personnalisation rapide
+
+### 📦 Plugins Ajoutés
+- `nvim-mini/mini.bufremove` - Gestion améliorée de la suppression des buffers
+- `s1n7ax/nvim-window-picker` - Sélecteur de fenêtres pour une navigation facile
+- `erl-koenig/theme-hub.nvim` - Gestionnaire de thèmes pour une personnalisation facile
+
+### 🐛 Corrections
+
+- **Explorateur de fichiers**: Amelioration de la gestion de fermeture des buffed :bd. Ajout mini.bufremove plugin.
+- **Raccourcis clavier** : Correction des conflits de raccourcis avec d'autres plugins
+- **Configuration** : Résolution de problèmes mineurs dans les fichiers de configuration
+- **Performance** : Optimisation de la vitesse de démarrage et de la réactivité globale
+
 ## [1.1.0] - 2025-10-08
 
 ### 🚀 Nouvelles Fonctionnalités
 - **Explorateur de fichiers** : Migration de nvim-tree vers Neo-tree pour une expérience moderne
+
 - **Plugin Store** : Ajout de `store.nvim` avec `markview.nvim` pour la gestion des plugins
 - **Format on Save** : Nouvelle option dans MegaToggler pour activer/désactiver le formatage automatique
 
