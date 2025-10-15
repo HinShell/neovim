@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 1.1.2 - 2025-11-15
+
+### 🐛 Corrections
+
+- **Mise a jour du CHANGELOG** : Ajout des notes de version pour 1.1.1
+- **markview.nvim** : Correction de l'installation du plugin manquant dans 1.1.1
+
 ## 1.1.1 - 2025-11-15
 
 ### 🚀 Nouvelles Fonctionnalités
