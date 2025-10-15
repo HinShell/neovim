@@ -4,12 +4,12 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     keys = {
-      { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "Copilot panel" },
-      { "<leader>cc", "<cmd>Copilot<cr>", desc = "Copilot toggle" },
-      { "<leader>cs", "<cmd>Copilot status<cr>", desc = "Copilot status" },
-      { "<C-l>", function() require('copilot.suggestion').accept_line() end, mode = "i", desc = "Accept line" },
-      { "<C-j>", function() require('copilot.suggestion').accept_word() end, mode = "i", desc = "Accept word" },
-      { "<C-ç>", function() require('copilot.suggestion').next() end, mode = "i", desc = "Next suggestion" },
+      { "<leader>cp", "<cmd>Copilot panel<cr>",                                   desc = "Copilot panel" },
+      { "<leader>cc", "<cmd>Copilot<cr>",                                         desc = "Copilot toggle" },
+      { "<leader>cs", "<cmd>Copilot status<cr>",                                  desc = "Copilot status" },
+      { "<M-l>",      function() require('copilot.suggestion').accept() end,      mode = "i",             desc = "Accept suggestion" },
+      { "<M-j>",      function() require('copilot.suggestion').accept_word() end, mode = "i",             desc = "Accept word" },
+      { "<M-k>",      function() require('copilot.suggestion').accept_line() end, mode = "i",             desc = "Accept line" },
     },
     config = function()
       require("copilot").setup({
@@ -34,8 +34,8 @@ return {
           debounce = 75,
           keymap = {
             accept = "<M-l>",
-            accept_word = false,
-            accept_line = false,
+            accept_word = "<M-j>",
+            accept_line = "<M-k>",
             next = "<M-]>",
             prev = "<M-[>",
             dismiss = "<C-]>",
