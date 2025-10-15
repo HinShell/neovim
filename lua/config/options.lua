@@ -197,26 +197,3 @@ vim.diagnostic.config({
     prefix = "",
   },
 })
-
--- =============================================
--- TERMINAL
--- =============================================
-
--- Configuration pour préserver les keymaps globaux en mode terminal
--- Désactiver la capture automatique des touches par le terminal
-vim.opt.timeout = true
-vim.opt.timeoutlen = 300 -- Temps d'attente pour les combinaisons de touches
-
--- Autocommande pour configurer le comportement global du terminal
-vim.api.nvim_create_autocmd("TermOpen", {
-  pattern = "*",
-  callback = function()
-    -- Pas de numéros de ligne dans les terminaux
-    vim.opt_local.number = false
-    vim.opt_local.relativenumber = false
-
-    -- Démarrer en mode insertion
-    vim.cmd("startinsert")
-  end,
-  desc = "Terminal global configuration"
-})

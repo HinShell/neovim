@@ -4,9 +4,7 @@
 local utils = require("utils")
 local map = utils.functions.map
 
--- Configuration de la touche leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- La touche leader est configurée dans config/lazy.lua
 
 -- =============================================
 -- GESTION DES FICHIERS ET BUFFERS
