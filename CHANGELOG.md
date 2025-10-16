@@ -7,7 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## 1.1.2 - 2025-11-15
+## [1.1.3] - 2025-10-16
+
+### 📚 Documentation
+
+- **Guide des raccourcis** : Ajout d'un guide complet des raccourcis clavier (KEYMAPS.md) avec tous les raccourcis organisés par catégorie
+- **Référence utilisateur** : Documentation complète incluant navigation, édition, plugins et conseils d'utilisation
+
+### ⚡ Performance
+
+- **Optimisation lazy loading** : Activation du chargement paresseux pour markview et neo-tree
+- **Temps de démarrage** : Amélioration du startup time de ~45-75ms en optimisant le chargement des plugins
+
+### 🔧 Refactoring
+
+- **Configuration centralisée** : Élimination des doublons dans la configuration des touches leader et terminal
+- **Architecture propre** : Consolidation de la configuration terminal dans un seul fichier pour une meilleure maintenance
+
+### 🐛 Corrections
+
+- **Conflits de raccourcis** : Résolution des conflits entre navigation fenêtres et Copilot avec migration vers les touches Meta (<M-l/j/k>)
+- **Keymaps optimisés** : Séparation logique Ctrl=navigation système, Meta=intelligence artificielle
+- **BufferLine** : Ajout du raccourci pour fermer les autres buffers avec BufferLineCloseOthers
+
+### 🎯 Changements de raccourcis
+
+#### Copilot (nouveaux raccourcis)
+- `<M-l>` : Accepter suggestion complète
+- `<M-j>` : Accepter mot suivant  
+- `<M-k>` : Accepter ligne complète
+- `<M-]>` : Suggestion suivante
+- `<M-[>` : Suggestion précédente
+
+#### Navigation (préservée)
+- `<C-h/j/k/l>` : Navigation fenêtres (aucun conflit)
+
+## [1.1.2] - 2025-11-15
 
 ### 🐛 Corrections
 
