@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 🚀 Nouvelles Fonctionnalités
+
+- **AI** : Remplacement de Copilot par Avante pour une expérience d'assistance améliorée (9955929)
+- **Plugins** : Ajout du plugin dédié LazyGit pour une gestion visuelle des repositories Git (c0ab801)
+
+### ✨ Améliorations
+
+- **AI** : Mise à jour de la config Avante avec de nouveaux modèles et des améliorations côté provider (5a68d9f)
+- **Neo-tree** : Amélioration de la configuration (use_libuv_file_watcher, follow_current_file, etc.) (a59b469)
+- **Plugins** : Nombreuses mises à jour des plugins pour plus de stabilité (331a1b7, 7887655, 941286d, 0b26477, dd76a18, d002d30, cc1821d, ea38893)
+
+### 🐛 Corrections
+
+- **Plugins** : Suppression de la configuration dupliquée de markdown-preview
+- **Plugins** : Correction de l'installation du plugin markdown-preview
+- **Floaterm** : Correction du scrolling dans le terminal flottant
+
 ## [1.1.3] - 2025-10-16
 
 ### 📚 Documentation
