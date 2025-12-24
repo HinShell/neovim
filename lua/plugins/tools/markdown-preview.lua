@@ -8,8 +8,6 @@ return {
     config = function()
       vim.g.mkdp_filetypes = { "markdown" }
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle <CR>", {})
-    end,
-    config = function()
       -- Configuration du plugin markdown-preview
       vim.g.mkdp_auto_start = 0         -- N'ouvre pas automatiquement la prévisualisation
       vim.g.mkdp_auto_close = 1         -- Ferme automatiquement la prévisualisation à la fermeture du buffer
