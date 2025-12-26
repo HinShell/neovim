@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **AI** : Mise à jour de la config Avante avec de nouveaux modèles et des améliorations côté provider (5a68d9f)
 - **Neo-tree** : Amélioration de la configuration (use_libuv_file_watcher, follow_current_file, etc.) (a59b469)
+- **Fzf-lua** : Ajout d'une configuration par défaut et substitution de find par fd (9c61712)
+- **Snacks** : Ajour d'une configuration par défaut (c16852c)
 - **Plugins** : Nombreuses mises à jour des plugins pour plus de stabilité (331a1b7, 7887655, 941286d, 0b26477, dd76a18, d002d30, cc1821d, ea38893)
 
 ### 🐛 Corrections
